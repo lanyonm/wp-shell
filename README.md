@@ -1,8 +1,8 @@
 wp-shell Cookbook
 =================
-I don't usually use Wordpress, but when I do, I configure it with Chef.
+I don't usually use WordPress, but when I do, I configure it with Chef.
 
-This application cookbook provides a recipe for configuring the shell for a Wordpress installation.  By 'shell', I mean the necessary Apache, PHP, and MySQL configuration needed to develop on a Wordpress site.  The recipe will also bootstrap the database with a MySQL dump.
+This application cookbook provides a recipe for configuring the shell for a WordPress installation.  By 'shell', I mean the necessary Apache, PHP, and MySQL configuration needed to develop on a WordPress site.  The recipe will also bootstrap the database with a MySQL dump.
 
 The intended use is with Vagrant, so the PHP code can live on the host machine, while the Vagrant-controlled VM will house the web server and database.  See Usage below for more information.
 

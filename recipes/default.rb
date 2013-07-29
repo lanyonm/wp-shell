@@ -20,10 +20,10 @@ include_recipe 'php'
 include_recipe 'php::module_mysql'
 
 # create the WP vhost
-web_app "jerry-garcia" do
-  server_name "jerry-garcia.dev"
+web_app "#{node['wp-shell']['server_name']}" do
+  server_name "#{node['wp-shell']['server_name']}"
   # server_aliases ["www.my-site.localhost"]
-  docroot "/opt/jerry-garcia"
+  docroot "#{node['wp-shell']['docroot']}"
 end
 
 # create the wp-config.php file
