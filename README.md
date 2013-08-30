@@ -1,8 +1,8 @@
-wp-shell Cookbook
+wp-shell Cookbook [![Build Status](https://travis-ci.org/LanyonM/wp-shell.png)](https://travis-ci.org/LanyonM/wp-shell)
 =================
 I don't usually use WordPress, but when I do, I configure it with Chef.
 
-This application cookbook provides a recipe for configuring the shell for a WordPress installation.  By 'shell', I mean the necessary Apache, PHP, and MySQL configuration needed to develop on a WordPress site.  The recipe will also bootstrap the database with a MySQL dump.
+This application cookbook provides a recipe for configuring the shell for a WordPress installation.  By 'shell', I mean the necessary Apache, PHP, and MySQL configuration needed to develop on a WordPress site.  The recipe will also bootstrap the database with a MySQL dump and run phpMyAdmin on port 8888.
 
 The intended use is with Vagrant, so the PHP code can live on the host machine, while the Vagrant-controlled VM will house the web server and database.  See Usage below for more information.
 
@@ -70,6 +70,7 @@ Usage
 #### wp-shell::default
 This recipe was designed to be invoked from within Vagrant.  Here's some of the Vagrant config:
 
+    config.vm.synced_folder "<path_on_host_machine_to_database_dump>", "/home/vagrant/host"
     config.vm.synced_folder "<path_on_host_machine_to_wp_src>", "/opt/wordpress"
 
     config.vm.provision :chef_solo do |chef|
