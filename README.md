@@ -1,4 +1,4 @@
-wp-shell Cookbook [![Build Status](https://travis-ci.org/LanyonM/wp-shell.png)](https://travis-ci.org/LanyonM/wp-shell)
+wp-shell Cookbook [![Build Status](https://travis-ci.org/LanyonM/wp-shell.png?branch=master)](https://travis-ci.org/LanyonM/wp-shell)
 =================
 I don't usually use WordPress, but when I do, I configure it with Chef.
 
