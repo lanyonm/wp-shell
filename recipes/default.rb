@@ -5,9 +5,9 @@
 # Copyright 2013, Michael Lanyon
 #
 
+include_recipe 'build-essential'
 include_recipe 'apt'
 include_recipe 'apache2'
-include_recipe 'build-essential'
 include_recipe 'git'
 include_recipe 'rsync'
 include_recipe 'vim'
