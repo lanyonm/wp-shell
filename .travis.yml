@@ -1,4 +1,8 @@
 language: ruby
+gemfile:
+   - Gemfile
 rvm:
   - 1.9.3
-script: bundle exec foodcritic ./
+script:
+  - bundle exec foodcritic ./
+  - bundle exec knife cookbook test wp-shell -c test/.chef/knife.rb

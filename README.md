@@ -94,6 +94,13 @@ A couple things to note:
 * The `./cookbooks` directory will need to contain the this cookbook.
 * You'll need to add a `hosts` file entry on the host machine for the `server_name` you choose.
 
+Testing
+_______
+This cookbook is tested by Travis-CI, but you may want to test it locally as well.  To do so, use the following commands:
+
+    BUNDLE_GEMFILE=test/support/Gemfile bundle exec foodcritic ./
+    BUNDLE_GEMFILE=test/support/Gemfile bundle exec knife cookbook test wp-shell -c test/.chef/knife.rb
+
 TODO
 ----
 
