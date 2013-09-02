@@ -91,20 +91,20 @@ This recipe was designed to be invoked from within Vagrant.  Here's some of the 
 
 A couple things to note:
 
-* The `./cookbooks` directory will need to contain the this cookbook.
+* The `./cookbooks` directory will need to contain the this cookbook and all it's dependencies.
 * You'll need to add a `hosts` file entry on the host machine for the `server_name` you choose.
 
 Testing
-_______
-This cookbook is tested by Travis-CI, but you may want to test it locally as well.  To do so, use the following commands:
+-------
+This cookbook is tested by Travis-CI, but you may want to test it locally as well.  Before running these tests you'll need to install the dependencies with Berkshelf: `bundle exec berks install --path vendor/cookbooks`.  To do so, use the following commands:
 
-    BUNDLE_GEMFILE=test/support/Gemfile bundle exec foodcritic ./
-    BUNDLE_GEMFILE=test/support/Gemfile bundle exec knife cookbook test wp-shell -c test/.chef/knife.rb
+    bundle exec foodcritic ./
+    bundle exec knife cookbook test wp-shell -c test/.chef/knife.rb
+    bundle exec rspec
 
 TODO
 ----
 
-* Write a unit test or two
 * Add test-kitchen and officially support more distros
 
 CHANGELOG

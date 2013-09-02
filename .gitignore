@@ -3,3 +3,6 @@ test/tmp
 test/version_tmp
 tmp
 README.html
+vendor/
+.kitchen/
+.kitchen.local.yml

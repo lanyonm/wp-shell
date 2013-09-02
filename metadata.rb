@@ -8,7 +8,7 @@ version          '0.1.0'
 
 recipe           'wp-shell', 'Installs the VirtualHost and wp-config.php file required to run a WordPress site.'
 
-%w{ ubuntu }.each do |os|
+%w{ ubuntu debian centos redhat }.each do |os|
   supports os
 end
 

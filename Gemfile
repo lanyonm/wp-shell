@@ -8,5 +8,6 @@ group :test do
   gem 'chefspec', '~> 2.0.1'
 end
 
+gem 'berkshelf', '~> 2.0'
 gem 'test-kitchen', '~> 1.0.0.beta.3', :group => :integration
 gem 'kitchen-vagrant', :group => :integration

@@ -6,3 +6,5 @@ rvm:
 script:
   - bundle exec foodcritic ./
   - bundle exec knife cookbook test wp-shell -c test/.chef/knife.rb
+  - bundle exec berks install --path vendor/cookbooks
+  - bundle exec rspec
